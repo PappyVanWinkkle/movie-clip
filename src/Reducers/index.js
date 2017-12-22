@@ -3,11 +3,11 @@
 */
 import { combineReducers } from "redux";
 import Movies from "./movies";
-import Showing from './moviesShowing';
+import tvs from './tvPopular';
 
 const reducers = combineReducers({
   movies: Movies,
-  moviesShowing: Showing
+  tvPopular: tvs
 });
 
 export default reducers;

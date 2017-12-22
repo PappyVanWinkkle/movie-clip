@@ -5,6 +5,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './Landing';
+import TV from './TV';
 import Movies from './Movies'
 
 class HomeRouter extends React.Component {
@@ -15,6 +16,7 @@ class HomeRouter extends React.Component {
                  <Switch>
                      <Route exact path="/" component={Landing} />
                      <Route path="/movies" component={Movies} />
+                     <Route path="/tv" component={TV} />
                      <Route render={function() {return <h3>Not Found</h3>}} />
                   </Switch>   
                </div>

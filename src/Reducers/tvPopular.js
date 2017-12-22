@@ -2,16 +2,16 @@
 * Reducer for Movies showing in Cinemas at this point in time
 * Imports Actions and has an Initial state to work with 
 */
-import { GET_FILMS_SHOWING } from "../Actions/actions";
+import { GET_POPULAR_TV } from "../Actions/actions";
 // Setting the Initial state for this component
 const originalState = {
   list: [],
-  movie: null
+  tv: null
 };
 
 export default function(state = originalState, action) {
   switch (action.type) {
-    case GET_FILMS_SHOWING:
+    case GET_POPULAR_TV:
       return {
         ...state,
         list: action.payload

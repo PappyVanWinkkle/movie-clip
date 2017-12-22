@@ -22,7 +22,7 @@ class Movies extends React.Component {
     const releaseDate = moment(movie.release_date).calendar();
     return (
       <div className="movie-item">
-        <p className="item-title">{movie.title}</p>
+        <h4 className="item-title">{movie.title}</h4>
         <p className="item-release-date">{releaseDate}</p>
       </div>
     );

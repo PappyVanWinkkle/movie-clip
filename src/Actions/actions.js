@@ -4,4 +4,4 @@
 */
 
 export const GET_POPULAR_FILMS = "GET_POPULAR_FILMS";
-export const GET_FILMS_SHOWING = "GET_FILMS_SHOWING";
+export const GET_POPULAR_TV = "GET_POPULAR_TV";

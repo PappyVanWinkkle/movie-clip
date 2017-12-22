@@ -5,7 +5,7 @@
 */
 import axios from "axios";
 import { GET_POPULAR_FILMS } from "./actions";
-import { GET_FILMS_SHOWING } from "./actions";
+import { GET_POPULAR_TV } from "./actions";
 const API_KEY = "e7e1f7a94e74b43e3ad800f25580c833";
 const baseURL = `https://api.themoviedb.org/3`;
 const language = "en-US";
@@ -24,15 +24,15 @@ export function getPopularFilms() {
     });
   };
 }
-// Gets the current Movies showing in Cinemas
-export function getFilmsShowing() {
-  const request = axios.get(`${baseURL}/movie/now_playing`, {
-    params: { api_key: API_KEY, language: language }
+// Get TV programs that are the most popular
+export function getPopularTv() {
+  const request = axios.get(`${baseURL}/tv/popular`, {
+    params: { api_key: API_KEY }
   });
   return dispatch => {
     request.then(res => {
       dispatch({
-        type: GET_FILMS_SHOWING,
+        type: GET_POPULAR_TV,
         payload: res.data.results
       });
     });
