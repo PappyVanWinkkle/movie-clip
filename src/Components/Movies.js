@@ -6,6 +6,7 @@
 */
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import SearchMovies from "./SearchMovies";
 import moment from "moment";
 import { getPopularFilms } from "../Actions/actionCreators";
 
@@ -30,14 +31,17 @@ class Movies extends React.Component {
 
   render() {
     var movies = this.props.movies.list.map(this.renderMovie);
-    return <div className="movies-list">{movies}</div>;
+    return <div className="movies-list">
+    <SearchMovies />
+    {movies}
+    </div>;
   }
 }
 
 function mapStateToProps({ movies }) {
-  return {
+  return { 
     movies
   };
 }
 
-export default connect(mapStateToProps, {getPopularFilms})(Movies)
+export default connect(mapStateToProps, { getPopularFilms })(Movies);
