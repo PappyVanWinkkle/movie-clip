@@ -7,6 +7,7 @@ import axios from "axios";
 import { GET_POPULAR_FILMS } from "./actions";
 import { GET_POPULAR_TV } from "./actions";
 import { SEARCH_MOVIES } from "./actions";
+import { GET_MOVIE } from "./actions";
 const API_KEY = "e7e1f7a94e74b43e3ad800f25580c833";
 const baseURL = `https://api.themoviedb.org/3`;
 const language = "en-US";
@@ -40,11 +41,11 @@ export function getPopularTv() {
   };
 }
 // Search movies Action creator gets the movies the user is looking for
-export function searchMovies(movie) {
-  let request;
-  if (movie) {
+export function searchMovies(term) {
+  var request;
+  if (term) {
     request = axios.get(`${baseURL}/search/movie`, {
-      params: { api_key: API_KEY, query: movie }
+      params: { api_key: API_KEY, language: language, query: term }
     });
   } else {
     request = axios.get(`${baseURL}/movie/popular`, {
@@ -56,6 +57,20 @@ export function searchMovies(movie) {
       dispatch({
         type: SEARCH_MOVIES,
         payload: res.data.results
+      });
+    });
+  };
+}
+// Gets the Movie with details including description and poster
+export function get_movie(id) {
+  const request = axios.get(`${baseURL}/movie/${id}`, {
+    params: { api_key: API_KEY }
+  });
+  return dispatch => {
+    request.then(res => {
+      dispatch({
+        type: GET_MOVIE,
+        payload: res.data
       });
     });
   };

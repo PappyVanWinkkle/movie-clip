@@ -2,8 +2,11 @@
 * Reducer for the Movie Application 
 * Reducer will expect an Action and State returning a new
 * state for the application 
+* The file will also return actions searching for movies 
 */
 import { GET_POPULAR_FILMS } from "../Actions/actions";
+import { SEARCH_MOVIES } from "../Actions/actions";
+import { GET_MOVIE } from "../Actions/actions";
 // setting the Initial State for the App
 const originalState = {
   list: [],
@@ -17,6 +20,16 @@ export default function(state = originalState, action) {
         ...state,
         list: action.payload
       };
+    case SEARCH_MOVIES:
+      return {
+        ...state,
+        list: action.payload
+      };
+    case GET_MOVIE:
+    return {
+        ...state,
+        list: action.payload
+    }  
     default:
       return state;
   }

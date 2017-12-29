@@ -6,7 +6,7 @@
 */
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import SearchMovies from "./SearchMovies";
+import Search from "./Search";
 import moment from "moment";
 import { getPopularFilms } from "../Actions/actionCreators";
 
@@ -22,26 +22,25 @@ class Movies extends React.Component {
   renderMovie(movie, i) {
     const releaseDate = moment(movie.release_date).calendar();
     return (
-      <div className="movie-item">
+      <div className="movie-item" key={i}>
         <h4 className="item-title">{movie.title}</h4>
         <p className="item-release-date">{releaseDate}</p>
+        <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}/>
       </div>
     );
   }
 
   render() {
     var movies = this.props.movies.list.map(this.renderMovie);
-    return <div className="movies-list">
-    <SearchMovies />
-    {movies}
-    </div>;
+    return <div className="movies-list"><Search />{movies}</div>;
   }
 }
 
 function mapStateToProps({ movies }) {
-  return { 
+  return {  
     movies
   };
 }
 
 export default connect(mapStateToProps, { getPopularFilms })(Movies);
+

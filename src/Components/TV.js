@@ -23,6 +23,7 @@ class TV extends React.Component {
       <div key={i}>
         <h2>{tv.name}</h2>
         <p>{airDate}</p>
+        <img src={`https://image.tmdb.org/t/p/w500/${tv.poster_path}`} />
       </div>
     )
   }
