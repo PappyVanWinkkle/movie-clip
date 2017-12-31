@@ -23,9 +23,9 @@ class Movies extends React.Component {
   renderMovie(movie, i) {
     const releaseDate = moment(movie.release_date).calendar();
     return (
-      <Link key={i} to={`/movie/${movie.id}`}>
+      <Link key={i} to={`/details/${movie.id}`}>
         <div className="movie-item">
-          <h4 className="item-title">{movie.title}</h4>
+          <h2 className="item-title">{movie.title}</h2>
           <p className="item-release-date">{releaseDate}</p>
           <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`Poster for ${movie.title}`}/>
         </div>

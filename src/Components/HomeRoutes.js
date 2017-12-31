@@ -18,7 +18,7 @@ class HomeRouter extends React.Component {
             <Route exact path="/" component={Landing} />
             <Route path="/movies" component={Movies} />
             <Route path="/tv" component={TV} />
-            <Route path=":id" component={MovieDetail}/>
+            <Route path="/details/:id" component={MovieDetail}/>
             <Route
               render={function() {
                 return <h3>Not Found</h3>;

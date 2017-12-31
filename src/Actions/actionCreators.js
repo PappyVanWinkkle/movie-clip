@@ -62,15 +62,15 @@ export function searchMovies(term) {
   };
 }
 // Gets the Movie with details including description and poster Action Creator 
-export function fetchMovieActionCreator (index) {
-  const request = axios.get(`${baseURL}/movie/${index}`, {
+export function fetchMovieActionCreator (id) {
+  const request = axios.get(`${baseURL}/movie/${id}`, {
     params: { api_key: API_KEY }
   })
   return dispatch => {
     request.then(res => {
       dispatch({
         type: GET_MOVIE,
-        index
+        payload: res.data
       })
     })
   }

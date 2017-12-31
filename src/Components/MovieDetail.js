@@ -9,13 +9,9 @@ import { fetchMovieActionCreator } from "../Actions/actionCreators";
 
 class MovieDetail extends React.Component {
   componentWillMount() {
-    this.props.fetchMovie(this.props.params.id);
+    this.props.fetchMovie(this.props.match.params.id);
   }
-  componentWillUpdate(next) {
-    if (this.props.params.id !== next.params.id) {
-      this.props.fetchMovie(next.params.id);
-    }
-  }
+  
   render() {
     const { movie } = this.props;
     return (
@@ -33,7 +29,7 @@ class MovieDetail extends React.Component {
 
 function mapStateToProps({ movieDetail }) {
   return {
-    movie: movieDetail.current
+    movie: movieDetail.movie
   };
 }
 

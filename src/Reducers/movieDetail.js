@@ -14,7 +14,7 @@ export default function(state = initialState, action) {
     case GET_MOVIE:
       return {
         ...state,
-        movie: state.all[action.index - 1]
+        movie: action.payload
       };
     default:
       return state;
