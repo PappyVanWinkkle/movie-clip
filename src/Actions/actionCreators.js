@@ -61,17 +61,18 @@ export function searchMovies(term) {
     });
   };
 }
-// Gets the Movie with details including description and poster
-export function get_movie(id) {
-  const request = axios.get(`${baseURL}/movie/${id}`, {
+// Gets the Movie with details including description and poster Action Creator 
+export function fetchMovieActionCreator (index) {
+  const request = axios.get(`${baseURL}/movie/${index}`, {
     params: { api_key: API_KEY }
-  });
+  })
   return dispatch => {
     request.then(res => {
       dispatch({
         type: GET_MOVIE,
-        payload: res.data
-      });
-    });
-  };
+        index
+      })
+    })
+  }
+  
 }
