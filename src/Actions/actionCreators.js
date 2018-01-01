@@ -6,6 +6,7 @@
 import axios from "axios";
 import { GET_POPULAR_FILMS } from "./actions";
 import { GET_POPULAR_TV } from "./actions";
+import { GET_TV } from "./actions";
 import { SEARCH_MOVIES } from "./actions";
 import { GET_MOVIE } from "./actions";
 const API_KEY = "e7e1f7a94e74b43e3ad800f25580c833";
@@ -61,18 +62,31 @@ export function searchMovies(term) {
     });
   };
 }
-// Gets the Movie with details including description and poster Action Creator 
-export function fetchMovieActionCreator (id) {
+// Gets the Movie with details including description and poster Action Creator
+export function fetchMovieActionCreator(id) {
   const request = axios.get(`${baseURL}/movie/${id}`, {
     params: { api_key: API_KEY }
-  })
+  });
   return dispatch => {
     request.then(res => {
       dispatch({
         type: GET_MOVIE,
         payload: res.data
-      })
-    })
-  }
-  
+      });
+    });
+  };
+}
+// Gets a particular TV programme with more details
+export function fetchTVActionCreator(id) {
+  const request = axios.get(`${baseURL}/tv/${id}`, {
+    params: { api_key: API_KEY }
+  });
+  return dispatch => {
+    request.then(res => {
+      dispatch({
+        type: GET_TV,
+        payload: res.data
+      });
+    });
+  };
 }

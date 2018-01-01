@@ -6,42 +6,41 @@
 */
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import moment from "moment";
 import { getPopularTv } from "../Actions/actionCreators";
 
 class TV extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
   }
   componentWillMount() {
     this.props.getPopularTv();
   }
   renderTv(tv, i) {
-    // format the date using moment.js library 
+    // format the date using moment.js library
     const airDate = moment(tv.first_air_date).calendar();
     return (
-      <div key={i}>
+      <Link key={i} to={`/detail/${tv.id}`}>
+      <div>
         <h2>{tv.name}</h2>
         <p>{airDate}</p>
         <img src={`https://image.tmdb.org/t/p/w500/${tv.poster_path}`} />
       </div>
-    )
+      </Link>
+    );
   }
-  render () {
-    var tvPopular = this.props.tvPopular.list.map(this.renderTv)
-    return (
-      <div>
-         {tvPopular}
-        </div>
-    )
+  render() {
+    var tvPopular = this.props.tvPopular.list.map(this.renderTv);
+    return <div>{tvPopular}</div>;
   }
 }
 
-// Maping state to props 
-function mapStateToProps ({tvPopular}) {
+// Maping state to props
+function mapStateToProps({ tvPopular }) {
   return {
     tvPopular
-  }
+  };
 }
-// Exporting the component 
-export default connect(mapStateToProps, {getPopularTv})(TV)
+// Exporting the component
+export default connect(mapStateToProps, { getPopularTv })(TV);

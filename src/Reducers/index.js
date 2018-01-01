@@ -3,13 +3,15 @@
 */
 import { combineReducers } from "redux";
 import Movies from "./movies";
-import tvs from './tvPopular';
-import MovieDetail from './movieDetail';
+import tvs from "./tvPopular";
+import tvdetail from "./tvDetails";
+import MovieDetail from "./movieDetail";
 
 const reducers = combineReducers({
   movies: Movies,
   tvPopular: tvs,
-  movieDetail: MovieDetail
+  movieDetail: MovieDetail,
+  tvDetails: tvdetail
 });
 
 export default reducers;

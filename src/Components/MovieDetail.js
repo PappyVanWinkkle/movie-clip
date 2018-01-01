@@ -17,6 +17,8 @@ class MovieDetail extends React.Component {
     return (
       <div className="movie-detail">
         <h2>{movie.title}</h2>
+        <h3>{movie.status}</h3>
+        <h5>{movie.tagline}</h5>
         <img
           src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
           alt={`poster for ${movie.title}`}

@@ -4,7 +4,7 @@
 */
 
 import { GET_MOVIE } from "../Actions/actions";
-// setting the inital State
+// setting the initial State
 const initialState = {
   movie: {}
 };
