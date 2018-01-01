@@ -1,0 +1,13 @@
+/*
+* Stylesheets for the Movies Component will be here 
+*/
+.main-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+img {
+    height: 300px;
+}

@@ -8,6 +8,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Search from "./Search";
+import "./Movies.css";
 import moment from "moment";
 import { getPopularFilms } from "../Actions/actionCreators";
 
@@ -23,13 +24,19 @@ class Movies extends React.Component {
   renderMovie(movie, i) {
     const releaseDate = moment(movie.release_date).calendar();
     return (
+      <div className="main-container">
       <Link key={i} to={`/details/${movie.id}`}>
-        <div className="movie-item">
-          <h2 className="item-title">{movie.title}</h2>
+        <div className="poster">
+          <h6 className="item-title">{movie.title}</h6>
           <p className="item-release-date">{releaseDate}</p>
-          <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`Poster for ${movie.title}`}/>
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            alt={`Poster for ${movie.title}`}
+          />
         </div>
+        
       </Link>
+      </div>
     );
   }
 

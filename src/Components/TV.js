@@ -23,7 +23,7 @@ class TV extends React.Component {
     return (
       <Link key={i} to={`/detail/${tv.id}`}>
       <div>
-        <h2>{tv.name}</h2>
+        <h6>{tv.name}</h6>
         <p>{airDate}</p>
         <img src={`https://image.tmdb.org/t/p/w500/${tv.poster_path}`} />
       </div>

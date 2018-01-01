@@ -6,7 +6,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchMovieActionCreator } from "../Actions/actionCreators";
-import { fetchMovieTrailerActionCreator } from '../Actions/actionCreators'
+import { fetchMovieTrailerActionCreator } from "../Actions/actionCreators";
 
 class MovieDetail extends React.Component {
   componentWillMount() {
@@ -16,19 +16,15 @@ class MovieDetail extends React.Component {
   renderTrailer() {
     const { trailers } = this.props.trailer;
     const video = trailers.map((trailer, i) => {
-       const {key} = trailer;
-       const url = `https://www.youtube.com/embed/${key}`
-       return (
-           <div className="trailer" key={i}>
-             <iframe src={url} frameBorder="0" allowFullScreen />
-           </div>
-       )
-    })
-    return (
-        <div className="videos">
-          {video}
+      const { key } = trailer;
+      const url = `https://www.youtube.com/embed/${key}`;
+      return (
+        <div className="trailer" key={i}>
+          <iframe src={url} frameBorder="0" allowFullScreen />
         </div>
-    )
+      );
+    });
+    return <div className="videos">{video}</div>;
   }
 
   render() {
