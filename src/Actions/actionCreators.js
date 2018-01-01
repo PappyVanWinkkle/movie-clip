@@ -8,6 +8,7 @@ import { GET_POPULAR_FILMS } from "./actions";
 import { GET_POPULAR_TV } from "./actions";
 import { GET_TV } from "./actions";
 import { SEARCH_MOVIES } from "./actions";
+import { GET_MOVIE_TRAILER } from "./actions";
 import { GET_MOVIE } from "./actions";
 const API_KEY = "e7e1f7a94e74b43e3ad800f25580c833";
 const baseURL = `https://api.themoviedb.org/3`;
@@ -86,6 +87,20 @@ export function fetchTVActionCreator(id) {
       dispatch({
         type: GET_TV,
         payload: res.data
+      });
+    });
+  };
+}
+// Gets the trailer for a specific Movie
+export function fetchMovieTrailerActionCreator(id) {
+  const request = axios.get(`${baseURL}/movie/${id}/videos`, {
+    params: { api_key: API_KEY }
+  });
+  return dispatch => {
+    request.then(res => {
+      dispatch({
+        type: GET_MOVIE_TRAILER,
+        payload: res.data.results
       });
     });
   };
