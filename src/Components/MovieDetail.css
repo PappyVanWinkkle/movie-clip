@@ -1,0 +1,35 @@
+/*
+* Movie Detail stylesheets 
+*/
+.movie-detail {
+    max-width: 400px;
+}
+.movie-detail 
+h3,
+h5 {
+  color: #34495e;
+  font-family: "Raleway", sans-serif;
+}
+.movie-detail p {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5em;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+}
+
+.movie-detail img {
+  height: 300px;
+}
+.movie-detail h2 {
+    
+    font-family: 'Poiret One', cursive;
+    color: white;
+}
+
+.movie-detail h2, h5 {
+    margin-left: 5px;
+    color: #34495e;
+}
+

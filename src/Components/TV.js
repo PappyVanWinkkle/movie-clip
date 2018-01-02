@@ -6,6 +6,7 @@
 */
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import "./Tv.css";
 import { Link } from "react-router-dom";
 import moment from "moment";
 import { getPopularTv } from "../Actions/actionCreators";
@@ -22,10 +23,12 @@ class TV extends React.Component {
     const airDate = moment(tv.first_air_date).calendar();
     return (
       <Link key={i} to={`/detail/${tv.id}`}>
-      <div>
-        <h6>{tv.name}</h6>
-        <p>{airDate}</p>
+      <div className="poster container">
+        <div className="row">
+        <div className="col-sm">
         <img src={`https://image.tmdb.org/t/p/w500/${tv.poster_path}`} />
+        </div>
+        </div>
       </div>
       </Link>
     );

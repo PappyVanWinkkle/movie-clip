@@ -4,6 +4,8 @@
 */
 import React, { Component } from "react";
 import { connect } from "react-redux";
+
+import "./MovieDetail.css";
 import { Link } from "react-router-dom";
 import { fetchMovieActionCreator } from "../Actions/actionCreators";
 import { fetchMovieTrailerActionCreator } from "../Actions/actionCreators";
@@ -20,7 +22,13 @@ class MovieDetail extends React.Component {
       const url = `https://www.youtube.com/embed/${key}`;
       return (
         <div className="trailer" key={i}>
-          <iframe src={url} frameBorder="0" allowFullScreen />
+          <iframe
+            width="600"
+            height="350"
+            src={url}
+            frameBorder="0"
+            allowFullScreen
+          />
         </div>
       );
     });
@@ -30,17 +38,20 @@ class MovieDetail extends React.Component {
   render() {
     const { movie } = this.props;
     return (
+      
       <div className="movie-detail">
         <h2>{movie.title}</h2>
-        <h3>{movie.status}</h3>
-        <h5>{movie.tagline}</h5>
+
+        <h5>Status: {movie.status}</h5>
         <img
           src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
           alt={`poster for ${movie.title}`}
         />
-        <p>{movie.overview}</p>
+
         {this.renderTrailer()}
       </div>
+
+    
     );
   }
 }

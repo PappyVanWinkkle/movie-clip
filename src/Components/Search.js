@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import _ from "lodash";
-import { connect } from 'react-redux';
+import { Link } from "react-router-dom";
+import "./Search.css";
+import { connect } from "react-redux";
 import { searchMovies } from "../Actions/actionCreators";
 
 class Search extends Component {
@@ -18,14 +20,19 @@ class Search extends Component {
     return (
       // component state to handle input
       // every 0.3 seconds, will search for movies based on query value
-      <div className="search-bar inner-addon right-addon">
-        <i className="glyphicon glyphicon-search" />
-        <input
-          className="form-control movie-search"
-          value={this.state.term}
-          onChange={event => this.onInputChange(event.target.value)}
-        />
-      </div>
+      <nav className="navbar navbar-light bg-light justify-content-between">
+        <Link to="/">
+        <a className="navbar-brand">Movie-Clip</a>
+        </Link>
+        <form className="form-inline">
+          <input
+            className="form-control movie-search"
+            value={this.state.term}
+            placeholder="Search"
+            onChange={event => this.onInputChange(event.target.value)}
+          />
+        </form>
+      </nav>
     );
   }
 
