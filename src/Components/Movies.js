@@ -24,19 +24,13 @@ class Movies extends React.Component {
   renderMovie(movie, i) {
     const releaseDate = moment(movie.release_date).calendar();
     return (
-      <div className="container">
-      <div className="row">
-      <div className= "col-sm main-container">
-      <Link key={i} to={`/details/${movie.id}`}>
-        <div className="poster">
+      <div className=" main-container ">
+        <Link key={i} to={`/details/${movie.id}`}>
           <img
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={`Poster for ${movie.title}`}
           />
-        </div> 
-      </Link>
-      </div>
-      </div>
+        </Link>
       </div>
     );
   }
@@ -44,14 +38,10 @@ class Movies extends React.Component {
   render() {
     var movies = this.props.movies.list.map(this.renderMovie);
     return (
-    
-       
       <div className="movies-list">
         <Search />
-       {movies}
+        {movies}
       </div>
-      
-      
     );
   }
 }

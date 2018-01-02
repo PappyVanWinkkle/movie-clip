@@ -1,15 +1,17 @@
 /*
-* Movie Detail stylesheets 
+* styles for the detailed page of TV details 
 */
-.movie-detail {
+.tv-detail {
   max-width: 1200px;
 }
-.movie-detail h3,
-h5 {
+
+.tv-detail h3,
+h5,
+h6 {
   color: #34495e;
   font-family: "Raleway", sans-serif;
 }
-.movie-detail p {
+.tv-detail p {
   font-family: "Raleway", sans-serif;
   line-height: 1.5em;
   font-weight: 300;
@@ -17,23 +19,8 @@ h5 {
   text-align: center;
 }
 
-.movie-detail img {
+.tv-detail img {
   height: 350px;
-}
-.movie-detail h2 {
-  font-family: "Poiret One", cursive;
-  color: white;
-}
-
-.movie-detail h2,
-h5 {
-  margin-left: 5px;
-  color: #34495e;
-}
-
-iframe {
-  margin-left: 30px;
-  margin-top: 74px;
 }
 
 .overview {
@@ -43,8 +30,4 @@ iframe {
   font-weight: 300;
   color: #34495e;
   font-family: "Raleway", sans-serif;
-}
-
-button {
-    margin-top: 5px;
 }

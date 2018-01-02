@@ -4,7 +4,6 @@
 */
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
 import "./MovieDetail.css";
 import { Link } from "react-router-dom";
 import { fetchMovieActionCreator } from "../Actions/actionCreators";
@@ -23,7 +22,7 @@ class MovieDetail extends React.Component {
       return (
         <div className="trailer" key={i}>
           <iframe
-            width="600"
+            width="500"
             height="350"
             src={url}
             frameBorder="0"
@@ -38,20 +37,23 @@ class MovieDetail extends React.Component {
   render() {
     const { movie } = this.props;
     return (
-      
-      <div className="movie-detail">
-        <h2>{movie.title}</h2>
-
-        <h5>Status: {movie.status}</h5>
-        <img
-          src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-          alt={`poster for ${movie.title}`}
-        />
-
-        {this.renderTrailer()}
+      <div className="container">
+        <div className="row align-items-start">
+          <div className="movie-detail col">
+            <h2>{movie.title}</h2>
+            <h5>Status: {movie.status}</h5>
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              alt={`poster for ${movie.title}`}
+            />
+            <Link to="/movies">
+            <button type="button" className="btn btn-outline-dark">Back</button>
+            </Link>
+          </div>
+          <div className="col overview">{movie.overview}</div>
+          {this.renderTrailer()}
+        </div>
       </div>
-
-    
     );
   }
 }
