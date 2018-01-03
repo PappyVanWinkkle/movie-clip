@@ -2,7 +2,9 @@
 * Movie Detail stylesheets 
 */
 .movie-detail {
-  max-width: 1200px;
+  margin: 0 auto;  
+  max-width: 100%;
+  max-height: 100%;
 }
 .movie-detail h3,
 h5 {
@@ -47,4 +49,25 @@ iframe {
 
 button {
     margin-top: 5px;
+}
+/* Media Queries */
+@media (max-width: 859px)  {
+   iframe {
+       max-width: 82%;
+       border-radius: 5px;
+   }
+   .overview {
+       font-size: 16px;
+       text-align: center;
+   }
+   img {
+       float: right;
+       margin-top: 2em;
+       margin-right: 30px;
+
+   }
+   .btn {
+       margin-left: 32px;
+       margin-top: 10px;
+   }
 }

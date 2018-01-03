@@ -60,7 +60,7 @@ const Landing = props => {
         </div>
       </nav>
       <div className="jumbotron">
-       <h2 className="display-3">Welcome To Movie-Clip</h2>
+       <h2 className="display-3 h5">Welcome To Movie-Clip</h2>
        <p className="lead">The only to place to view and search for Movie trailers</p>
        <Link to="/movies">
        <button type="button" className="btn btn-outline-dark">Find Out More</button>

@@ -8,17 +8,17 @@
   max-width: 1200px;
 }
 
-h1 {
-  font-family: "Bungee", cursive;
-  color: #e74c3c;
-  float: left;
-}
-
 p {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   line-height: 1.3em;
 }
 .jumbotron > h2 {
-    font-family:  "Bungee", cursive;
+  font-family: "Bungee", cursive;
+}
+/* Media Queries for responsiveness */
+@media (max-width: 732px) {
+  .jumbotron > h2 {
+    font-size: 50px;
+  }
 }
