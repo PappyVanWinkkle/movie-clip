@@ -20,7 +20,7 @@ class TVDetail extends React.Component {
       const { key } = trailer;
       const url = `https://youtube.com/embed/${key}`;
       return (
-        <div className="trailer-tv">
+        <div className="trailer-tv" key={i}>
           <iframe
             width="500"
             height="350"

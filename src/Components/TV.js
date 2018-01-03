@@ -6,6 +6,7 @@
 */
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import TVnavigation from "./TvNav";
 import "./Tv.css";
 import { Link } from "react-router-dom";
 import moment from "moment";
@@ -23,7 +24,7 @@ class TV extends React.Component {
     const airDate = moment(tv.first_air_date).calendar();
     return (
       <Link key={i} to={`/detail/${tv.id}`}>
-      <div className="poster container">
+      <div className="main-container">
         <div className="row">
         <div className="col-sm">
         <img src={`https://image.tmdb.org/t/p/w500/${tv.poster_path}`} />
@@ -35,7 +36,12 @@ class TV extends React.Component {
   }
   render() {
     var tvPopular = this.props.tvPopular.list.map(this.renderTv);
-    return <div>{tvPopular}</div>;
+    return (
+      <div className="tv-list">
+        <TVnavigation />
+      {tvPopular}
+      </div>
+    )
   }
 }
 

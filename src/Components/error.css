@@ -1,0 +1,14 @@
+/*
+*  stylesheets for the Error Page 
+*/
+.error > h1 {
+  font-size: 150px;
+  text-align: center;
+  margin-top: 150px;
+  margin-left: 70px;
+}
+.error > p {
+  font-size: 2em;
+  line-height: 1.3em;
+  font-weight: 300;
+}

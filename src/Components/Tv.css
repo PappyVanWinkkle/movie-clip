@@ -2,5 +2,14 @@
 * styles for the TV component will be in here 
 */
 .poster img {
-   height: 350px;
+    height: 350px;
+    border-radius: 5px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1200px;
+    
 }

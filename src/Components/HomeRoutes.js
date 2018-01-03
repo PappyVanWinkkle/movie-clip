@@ -6,8 +6,10 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Landing from "./Landing";
 import tvDetail from "./TVDetail";
+import About from "./About";
 import MovieDetail from "./MovieDetail";
 import TV from "./TV";
+import Error from "./404Page";
 import Movies from "./Movies";
 
 class HomeRouter extends React.Component {
@@ -21,10 +23,9 @@ class HomeRouter extends React.Component {
             <Route path="/tv" component={TV} />
             <Route path="/details/:id" component={MovieDetail} />
             <Route path="/detail/:id" component={tvDetail} />
+            <Route path="/about" component={About} />
             <Route
-              render={function() {
-                return <h3>Not Found</h3>;
-              }}
+                   component={Error}
             />
           </Switch>
         </div>
