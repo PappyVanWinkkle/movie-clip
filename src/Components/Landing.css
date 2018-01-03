@@ -2,23 +2,23 @@
 * stylesheets for the Landing Component will be presented in this file.
 */
 .Landing {
-    margin: 0 auto;
-    text-align: center;
-    background: #ecf0f1;
-    max-width: 1200px;
-
+  margin: 0 auto;
+  text-align: center;
+  background: #ecf0f1;
+  max-width: 1200px;
 }
 
 h1 {
   font-family: "Bungee", cursive;
   color: #e74c3c;
   float: left;
-  
 }
 
 p {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    line-height: 1.3em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  line-height: 1.3em;
 }
-
+.jumbotron > h2 {
+    font-family:  "Bungee", cursive;
+}

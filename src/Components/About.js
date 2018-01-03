@@ -18,7 +18,7 @@ const About = props => {
         but cannot search for TV shows. The folks at Movie-Clip are working very
         hard to implement a feature that searches for TV shows. Lastly we use
         the MOVIE DB API from our good friends from the said website to bring
-        you all this wondeful content. Please enjoy using the app :)
+        you all this wondeful content. Please enjoy using the app<bold> :)</bold>
       </p>
     </div>
   );
