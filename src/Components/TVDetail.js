@@ -2,7 +2,7 @@
 * TV show component to be rendered when the user 
 * clicks on a specific moving displaying more info
 */
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./TVdetail.css";
@@ -22,6 +22,7 @@ class TVDetail extends React.Component {
       return (
         <div className="trailer-tv" key={i}>
           <iframe
+            title="tv"
             width="500"
             height="350"
             src={url}
@@ -38,18 +39,21 @@ class TVDetail extends React.Component {
     return (
       <div className="container">
         <div className="row align-items-start">
-          <div className="tv-detail col">
+          <div className="tv-detail col-lg-10">
             <h3>{tv.name}</h3>
             <h5>Status: {tv.status}</h5>
             
             <img
+              className="img-thumbnail"
               src={`https://image.tmdb.org/t/p/w500/${tv.poster_path}`}
               alt={`poster for ${tv.name}`}
             />
             <h6>Number of Episodes {tv.number_of_episodes}</h6>
+            <div className="col-lg-2">
             <Link to="/tv">
-            <button type="button" className="btn btn-outline-dark">Back</button>
+            <button type="button" className="btn btn-outline-dark btn-lg d-block">Back</button>
             </Link>
+            </div>
           </div>
           <div className="col">
             <p className="overview">{tv.overview}</p>

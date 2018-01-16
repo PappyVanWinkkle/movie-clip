@@ -10,8 +10,8 @@ const errorPage = props => {
   return (
     <div className="container">
       <div className="row">
-        <div className="error col">
-          <h1>404 Error</h1>
+        <div className="error col-lg-12">
+          <h1 className="text-center">404 Error</h1>
           <p className="col">
             Ooooooops, Looks like nothing was found on this page. Maybe try the
             link below for further assistance

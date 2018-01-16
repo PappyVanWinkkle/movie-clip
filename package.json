@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "bootstrap": "^4.0.0-beta.3",
+    "jquery": "1.9.1",
     "lodash": "^4.17.4",
     "moment": "^2.20.1",
+    "popper.js": "^1.12.9",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",

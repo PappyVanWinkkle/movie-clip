@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import _ from "lodash";
 import { Link } from "react-router-dom";
 import "./Search.css";
 import { connect } from "react-redux";
 import { searchMovies } from "../Actions/actionCreators";
 
-class Search extends Component {
+class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +22,7 @@ class Search extends Component {
       // every 0.3 seconds, will search for movies based on query value
       <nav className="navbar navbar-light bg-light justify-content-between">
         <Link to="/">
-        <a className="navbar-brand">Movie-Clip</a>
+          <a className="navbar-brand">Movie-Clip</a>
         </Link>
         <form className="form-inline">
           <input

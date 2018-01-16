@@ -4,25 +4,20 @@
 * Popular Movies from the MOVIE DB API
 * UI does not display every detail of the Movies in Question
 */
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Search from "./Search";
 import "./Movies.css";
-import moment from "moment";
 import { getPopularFilms } from "../Actions/actionCreators";
 
 class Movies extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentWillMount() {
     this.props.getPopularFilms();
   }
 
   renderMovie(movie, i) {
-    const releaseDate = moment(movie.release_date).calendar();
+    
     return (
       <div className=" main-container ">
         <Link key={i} to={`/details/${movie.id}`}>

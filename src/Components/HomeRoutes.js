@@ -2,7 +2,7 @@
 * Main Routing component for the Application
 */
 
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Landing from "./Landing";
 import tvDetail from "./TVDetail";
@@ -24,9 +24,7 @@ class HomeRouter extends React.Component {
             <Route path="/details/:id" component={MovieDetail} />
             <Route path="/detail/:id" component={tvDetail} />
             <Route path="/about" component={About} />
-            <Route
-                   component={Error}
-            />
+            <Route component={Error} />
           </Switch>
         </div>
       </BrowserRouter>

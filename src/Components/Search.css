@@ -2,12 +2,12 @@
 * styles for the navbar and search go here
 */
 .navbar {
-    margin-top: 15px;
-    border-radius: 3px;
-    margin-bottom: 15px;
+  margin-top: 15px;
+  border-radius: 3px;
+  margin-bottom: 15px;
 }
 .navbar a {
-    text-decoration: none;
-    font-family: "Bungee", cursive;
-    color: black
+  text-decoration: none;
+  font-family: "Bungee", cursive;
+  color: black;
 }
