@@ -4,9 +4,12 @@ The app uses React and Redux for State Management.
 ## Getting Started 
 Simply clone the repo onto your local Machine then cd into the movies directory 
 
+You need to install the dependencies simply by performing the action below 
+
 ``` Javascript 
 npm install 
 ```
+Then start the local server by performing the action below and Enjoy
 
 ``` Javascript 
  npm start 
