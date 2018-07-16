@@ -8,6 +8,7 @@ import topRated from './topMovies';
 import newMovies from './upcomingMovie';
 import playing from './playing';
 import current from './current';
+
 import tvtrailer from './tvtrailer';
 
 export default combineReducers({
