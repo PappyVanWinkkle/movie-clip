@@ -12,7 +12,7 @@ Once cloned to your desired location simply perform npm install or yarn to add d
 After this is complete npm start or yarn start should direct you to the localhost:3060
 where you can view the application 
 
-A link to the Movie App [Movie-Clip](https://movieclip.herokuapp.com/)
+
 
 A link will be provided once the app is deployed to heroku 
 
