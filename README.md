@@ -1,18 +1,16 @@
 # Movie Clip 
-
-A Netflix like application that uses the Movie DB API to retrieve some Movies and TV shows
-
-
+A Netflix like app for Movies and TV shows. You can watch Trailers of Movies and TV Shows
+The app uses React and Redux for State Management.
 ## Getting Started 
+Simply clone the repo onto your local Machine then cd into the movies directory 
 
-To have a feel of the application you can simply clone the repo 
+``` Javascript 
+npm install 
+```
 
-Once cloned to your desired location simply perform npm install or yarn to add dependencies 
+``` Javascript 
+ npm start 
+ ```
 
-After this is complete npm start or yarn start should direct you to the localhost:3060
-where you can view the application 
-
-
-
-A link will be provided once the app is deployed to heroku 
+ The app has recently undergone a major refactoring. Redux was included for state Management. 
 
