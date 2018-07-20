@@ -17,4 +17,4 @@ Then start the local server by performing the action below and Enjoy
 
  The app has recently undergone a major refactoring. Redux was included for state Management. 
 
- [MovieClip](https://d2y7irclkitisc.cloudfront.net)
+[Movie-Clip](https://d2y7irclkitisc.cloudfront.net/)
